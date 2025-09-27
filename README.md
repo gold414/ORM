@@ -29,8 +29,10 @@ class Car_DB(models.Model):
            Car_model = models.CharField(max_length = 10)
            Car_type  = models.CharField(max_length = 8)
            VIN_no    = models.CharField(max_length = 17,primary_key = True)
+          Seat_count = models.IntegerField()
+
 class DBAdmin(admin.ModelAdmin):
-    list_display = ["Car_brand","Car_model","Car_type","VIN_no"]
+    list_display = ["Car_brand","Car_model","Car_type","VIN_no","Seat_count"]
 
 admin.py
 
@@ -42,8 +44,7 @@ admin.site.register(Car_DB,DBAdmin)
 
 
 ## OUTPUT
-![alt text](<Screenshot (14).png>)
-
+![alt text](<Screenshot (77).png>)
 
 ## RESULT
 Thus the program for creating car inventory database database using ORM hass been executed successfully

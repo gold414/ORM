@@ -5,6 +5,6 @@ class Car_DB(models.Model):
            Car_model = models.CharField(max_length = 10)
            Car_type  = models.CharField(max_length = 8)
            VIN_no    = models.CharField(max_length = 17,primary_key = True)
-           Seat_count = models.IntegerField()
+           Seat_count = models.IntegerField(default=0)
 class DBAdmin(admin.ModelAdmin):
     list_display = ["Car_brand","Car_model","Car_type","VIN_no","Seat_count"]
